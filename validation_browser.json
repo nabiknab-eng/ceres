@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "browsers": [
+    "Codex in-app browser over localhost",
+    "Safari direct file:// after local server stopped"
+  ],
+  "first_and_second_field_options": [
+    "asr",
+    "olr",
+    "net",
+    "albedo",
+    "cloud"
+  ],
+  "all_five_options_tested_in_both_panels": true,
+  "three_independent_sliders_tested_during_playback": true,
+  "three_auto_scales_and_manual_override": true,
+  "monthly_last_frame": 306,
+  "last_window": "09/2025 – 08/2026",
+  "last_date": "02.03.2026 12:00 UTC",
+  "offline_last_frame_observed_fields": [
+    "asr",
+    "olr",
+    "temperature"
+  ],
+  "offline_last_frame_limits": [
+    20,
+    20,
+    4
+  ],
+  "annual_first_and_last_years": [
+    2001,
+    2025
+  ],
+  "fiveyear_first_and_last_periods": [
+    "2001–2005",
+    "2021–2025"
+  ],
+  "export_json_downloaded_from_html": "docs/test_export_settings.json",
+  "downloaded_settings_exported_to_mp4": "exports/test_albedo_cloud_10-14.mp4",
+  "local_html_opened": "index.html",
+  "network_required_for_viewer": false,
+  "github_publication_performed": false
+}

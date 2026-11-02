@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.DS_Store
+asr/original/raw/
+asr/original/data/
+asr/data/
+data/*.nc
+exports/*.mp4
+bin/ffmpeg-*

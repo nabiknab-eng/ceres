@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "source_sha256": {
+    "toa": "5258da55e1df6e4ee461b708a797a1d94eb893765df3ce89ab38ab681fc31a4f",
+    "temperature": "937c4b1911849eb3c39cf91c4f0773f9565d412784080c4a66408b1c1eeb8d73"
+  },
+  "common_months": 318,
+  "rolling_frames": 307,
+  "first_window": {
+    "index": 0,
+    "label": "30.08.2000 12:00 UTC",
+    "center": "2000-08-30T12:00:00+00:00",
+    "start": "2000-03-01T00:00:00+00:00",
+    "end_exclusive": "2001-03-01T00:00:00+00:00",
+    "window": "03/2000 – 02/2001",
+    "days": 365
+  },
+  "last_window": {
+    "index": 306,
+    "label": "02.03.2026 12:00 UTC",
+    "center": "2026-03-02T12:00:00+00:00",
+    "start": "2025-09-01T00:00:00+00:00",
+    "end_exclusive": "2026-09-01T00:00:00+00:00",
+    "window": "09/2025 – 08/2026",
+    "days": 365
+  },
+  "reference_period": "2001-2025",
+  "metrics": {
+    "asr": {
+      "scalar_max_error": 0.0,
+      "missing_reference_cells": 0,
+      "max_display_float32_error": 1.9070448615821078e-06,
+      "legacy_values_unchanged": true
+    },
+    "olr": {
+      "scalar_max_error": 0.0,
+      "missing_reference_cells": 0,
+      "max_display_float32_error": 1.9067192909005826e-06,
+      "legacy_values_unchanged": false
+    },
+    "net": {
+      "scalar_max_error": 0.0,
+      "missing_reference_cells": 0,
+      "max_display_float32_error": 9.532150926361282e-07,
+      "legacy_values_unchanged": false
+    },
+    "albedo": {
+      "scalar_max_error": 1.4210854715202004e-14,
+      "missing_reference_cells": 0,
+      "max_display_float32_error": 4.7672366321194204e-07,
+      "legacy_values_unchanged": false
+    },
+    "cloud": {
+      "scalar_max_error": 0.0,
+      "missing_reference_cells": 0,
+      "max_display_float32_error": 1.7734981270223216e-06,
+      "legacy_values_unchanged": false
+    },
+    "temperature": {
+      "scalar_max_error": 0.0,
+      "missing_reference_cells": 826,
+      "max_display_float32_error": 2.3834315321380473e-07,
+      "legacy_values_unchanged": true
+    }
+  },
+  "dataset": "Existing CERES EBAF-TOA Ed4.2.1 only; no new downloads",
+  "projection": {
+    "projection": "+proj=moll +lon_0=0 +R=1",
+    "central_meridian": 0,
+    "inverse_vs_proj_max_error_degrees": 2.2168933355715126e-12,
+    "max_relative_area_jacobian_error": 1.8424669567806973e-09,
+    "sphere_and_ellipse_area": 12.566370614359172,
+    "geographic_controls_pass": true
+  },
+  "all_modes_use_identical_common_windows": true,
+  "albedo_polar_night_policy": "ratio of whole-window energy sums"
+}

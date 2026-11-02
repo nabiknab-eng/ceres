@@ -1,0 +1,51 @@
+{
+  "source_monthly_net_identity_residual_W_m2": 0.1500244140625,
+  "net_equals_asr_minus_olr_max_error": {
+    "rolling": 0.07104064870480364,
+    "annual": 0.0638331338839575,
+    "fiveyear": 0.02409024361180201
+  },
+  "albedo_polar_night_and_missing_policy": "PASS",
+  "asr_preserved_files_per_copy": 194,
+  "js_python_identical_map_rasters": 2022,
+  "color_boundary_cases": 660,
+  "videos": [
+    {
+      "video": "ceres_ASR_NET_T_2000-2026_6fps.mp4",
+      "frames": 307,
+      "fps": 6.0,
+      "all_months_and_pts_verified": true,
+      "min_map_psnr_db": 33.8462218709103,
+      "max_map_mean_absolute_error": 3.628014814814815,
+      "fields": [
+        "asr",
+        "net",
+        "temperature"
+      ],
+      "limits": [
+        20.0,
+        20.0,
+        4.0
+      ]
+    },
+    {
+      "video": "test_albedo_cloud_10-14.mp4",
+      "frames": 5,
+      "fps": 4.0,
+      "all_months_and_pts_verified": true,
+      "min_map_psnr_db": 25.255556794414943,
+      "max_map_mean_absolute_error": 7.439637037037037,
+      "fields": [
+        "albedo",
+        "cloud",
+        "temperature"
+      ],
+      "limits": [
+        0.5,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "status": "PASS"
+}
