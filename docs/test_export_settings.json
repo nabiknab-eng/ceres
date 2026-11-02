@@ -1,0 +1,25 @@
+{
+  "schema": 2,
+  "mode": "rolling",
+  "start": 10,
+  "end": 14,
+  "fields": [
+    "albedo",
+    "cloud",
+    "temperature"
+  ],
+  "limits": [
+    0.5,
+    1,
+    1
+  ],
+  "auto": [
+    false,
+    false,
+    false
+  ],
+  "fps": 4,
+  "width": 1920,
+  "height": 1080,
+  "reference": "2001-2025"
+}
