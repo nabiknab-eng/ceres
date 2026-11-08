@@ -1,0 +1,1 @@
+{"schema":2,"region":"europe","mode":"rolling","start":0,"end":306,"fields":["asr","net","temperature"],"limits":[20,20,4],"auto":[false,false,false],"fps":6,"width":1920,"height":1080,"reference":"2001-2025"}

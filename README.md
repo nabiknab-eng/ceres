@@ -1,5 +1,7 @@
 # CERES — interaktivní tři mapy a export MP4
 
+Atlas má tři přepínatelné oblasti: [Celý svět](https://nabiknab-eng.github.io/ceres/), [Evropa](https://nabiknab-eng.github.io/ceres/evropa/) a [Střední Evropa](https://nabiknab-eng.github.io/ceres/stredni-evropa/). Při přepnutí zůstává zvolený snímek, časové rozlišení, veličiny i ruční nastavení škál. Automatické škály se přepočítají pro nový výřez. Místní export MP4 pro regionální pohledy je popsaný v návodech pro [Evropu](evropa/) a [Střední Evropu](stredni-evropa/).
+
 **[Otevřít web CERES](https://nabiknab-eng.github.io/ceres/)** · **[Původní nezměněný web ASR](https://nabiknab-eng.github.io/ceres-asr-temperature-atlas/)**
 
 - [Offline HTML, všechna vizualizační data a exportní nástroj (ZIP)](https://github.com/nabiknab-eng/ceres/archive/refs/tags/v1.0.0.zip)

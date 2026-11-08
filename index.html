@@ -1,6 +1,12 @@
 <!doctype html>
-<html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CERES · tři synchronizované mapy</title><link rel="stylesheet" href="viewer/style.css"><script defer src="viewer/manifest.js"></script><script defer src="viewer/color_logic.js"></script><script defer src="viewer/viewer.js"></script></head>
+<html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CERES · tři synchronizované mapy</title><link rel="stylesheet" href="viewer/style.css"><script defer src="viewer/manifest.js"></script><script defer src="viewer/color_logic.js"></script><link rel="stylesheet" href="viewer/regions.css"><script defer src="viewer/regions.js"></script><script defer src="viewer/viewer.js"></script></head>
 <body><main><header><div class="eyebrow">CERES EBAF ED4.2.1 × BERKELEY EARTH HIGH-RESOLUTION TAVG</div><h1>CERES</h1>
+<nav class="region-switch" aria-label="Oblast map">
+  <span>Oblast map</span>
+  <a href="index.html" data-region aria-current="page">Celý svět</a>
+  <a href="evropa/index.html" data-region>Evropa</a>
+  <a href="stredni-evropa/index.html" data-region>Střední Evropa</a>
+</nav>
 <details><summary>Data, časová okna a definice fyzikálních veličin</summary>
 <p>Všechny mapy zobrazují <strong>anomálie vůči neměnné místní referenci 2001–2025</strong>. Kladná hodnota je červená, záporná modrá, přesná nula bílá a chybějící hodnota šedá. Barva vyjadřuje znaménko zvolené veličiny.</p>
 <ul class="definitions">
