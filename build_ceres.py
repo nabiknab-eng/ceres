@@ -14,7 +14,7 @@ old=base.old
 FIELDS={
  'asr':dict(label='ASR',title='Anomálie ASR',unit='W/m²',nc_unit='W m-2',minimum=5,maximum=40,step=1,default=20),
  'olr':dict(label='OLR',title='Anomálie OLR',unit='W/m²',nc_unit='W m-2',minimum=5,maximum=40,step=1,default=20),
- 'net':dict(label='NET / EEI',title='Anomálie NET / EEI',unit='W/m²',nc_unit='W m-2',minimum=5,maximum=40,step=1,default=20),
+ 'net':dict(label='NET na TOA',title='Anomálie NET na TOA',unit='W/m²',nc_unit='W m-2',minimum=5,maximum=40,step=1,default=20),
  'albedo':dict(label='Planetární albedo',title='Anomálie albeda',unit='p. b.',nc_unit='percentage_points',minimum=.5,maximum=10,step=.1,default=2),
  'cloud':dict(label='Cloud Fraction',title='Anomálie oblačnosti',unit='p. b.',nc_unit='percentage_points',minimum=1,maximum=30,step=.5,default=10),
  'temperature':dict(label='Povrchová teplota',title='Anomálie povrchové teploty',unit='°C',nc_unit='degree_Celsius',minimum=1,maximum=7,step=.2,default=4),
@@ -155,3 +155,4 @@ def main():
  report['projection']=old.projection_checks();report['all_modes_use_identical_common_windows']=True;report['albedo_polar_night_policy']='ratio of whole-window energy sums';dump(ROOT/'validation_computation.json',report)
  print('BUILD PASS',len(metas['rolling']),'rolling frames',flush=True)
 if __name__=='__main__':main()
+

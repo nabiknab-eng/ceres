@@ -28,10 +28,15 @@ window.CeresRegions = {
       return { [field]: { limit: snapped, auto: false } };
     });
 
-    return { mode, index, selected, scales };
+    return { mode, index, selected, scales, lockScale: params.get('lockScale') === '1' };
   },
 
-  connect(state) {
+  connect(state, manifest) {
+    const toggle = document.getElementById('lock-region-scales');
+    if (toggle) {
+      toggle.checked = state.lockScale;
+      toggle.addEventListener('change', () => { state.lockScale = toggle.checked; });
+    }
     for (const link of document.querySelectorAll('[data-region]')) {
       link.addEventListener('click', (event) => {
         if (link.getAttribute('aria-current') === 'page' &&
@@ -42,13 +47,21 @@ window.CeresRegions = {
         const destination = new URL(link.href);
         destination.searchParams.set('mode', state.mode);
         destination.searchParams.set('frame', String(state.index));
+        destination.searchParams.set('lockScale', state.lockScale ? '1' : '0');
         state.selected.forEach((field, panel) => {
           if (panel < 2) destination.searchParams.set('field' + panel, field);
           const scale = state.scales[panel][field];
-          if (scale) destination.searchParams.set('scale' + panel, scale.auto ? 'auto' : String(scale.limit));
+          if (scale) {
+            const limit = scale.auto && state.lockScale
+              ? manifest.modes[state.mode].fields[field].auto_limit
+              : scale.limit;
+            destination.searchParams.set('scale' + panel,
+              scale.auto && !state.lockScale ? 'auto' : String(limit));
+          }
         });
         link.href = destination.href;
       });
     }
   },
 };
+
