@@ -64,4 +64,3 @@ window.CeresRegions = {
     }
   },
 };
-

@@ -155,4 +155,3 @@ def main():
  report['projection']=old.projection_checks();report['all_modes_use_identical_common_windows']=True;report['albedo_polar_night_policy']='ratio of whole-window energy sums';dump(ROOT/'validation_computation.json',report)
  print('BUILD PASS',len(metas['rolling']),'rolling frames',flush=True)
 if __name__=='__main__':main()
-
