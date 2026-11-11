@@ -2,7 +2,8 @@
 'use strict';
 const M=window.CERES_MANIFEST,S=M.render,$=id=>document.getElementById(id),canvas=$('scene'),ctx=canvas.getContext('2d',{alpha:false});
 const state={...window.CeresRegions.read(M),fields:null,playing:false,loading:false,serial:0,fps:6,lastTick:0};
-window.CeresRegions.connect(state);
+M.fields.net.label='NET na TOA';M.fields.net.title='Anomálie NET na TOA';
+window.CeresRegions.connect(state,M);
 const cache=new Map(),pending=new Map(),rasters=Array.from({length:3},()=>document.createElement('canvas'));let lut,coast;
 rasters.forEach(c=>{c.width=S.map_width;c.height=S.map_height;});
 const palette=S.palette.concat([S.missing]),rgba32=new Uint32Array(palette.map(c=>(255<<24)|(c[2]<<16)|(c[1]<<8)|c[0]));
@@ -37,3 +38,4 @@ $('export').onclick=()=>{try{const s=settings(),blob=new Blob([JSON.stringify(s,
 let advancing=false;async function tick(t){if(state.playing&&!state.loading&&!advancing&&t-state.lastTick>=1000/state.fps){if(state.index>=currentMode().frames.length-1)setPlaying(false);else{advancing=true;await showFrame(state.index+1);state.lastTick=performance.now();advancing=false;}}requestAnimationFrame(tick);}requestAnimationFrame(tick);
 async function init(){try{if(new Uint8Array(new Uint32Array([1]).buffer)[0]!==1)throw Error('Nepodporované pořadí bajtů.');lut=new Int32Array(await unzip(S.projection_gzip));coast=new Image();const ready=new Promise((resolve,reject)=>{coast.onload=resolve;coast.onerror=reject;});coast.src='data:image/png;base64,'+S.coast_png;await Promise.all([ready,document.fonts.load('24px AtlasSans'),document.fonts.load('700 24px AtlasSans')]);$('coverage').textContent=M.common_start+' až '+M.common_end;$('frames-count').textContent=M.modes.rolling.frames.length;exportUI();await showFrame(state.index);}catch(e){$('status').textContent='Chyba: '+e.message;}}
 init();
+
